@@ -8,9 +8,7 @@ const PORT = 3000;
 
 const app = express();
 
-app.use(bodyParser.json());
-
-app.post("/", graphqlHTTP({
+app.use("/", graphqlHTTP({
     schema: schema,
     graphiql: true
 }));
